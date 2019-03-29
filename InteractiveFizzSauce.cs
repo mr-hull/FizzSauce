@@ -4,12 +4,13 @@ namespace FizzSauce2TheSearchForMoreFizzSauce
 {
     class InteractiveFizzSauce
     {
+        static string nL = Environment.NewLine;
+        static string charName;
+
         static void Main()
         {
             ConsoleKeyInfo cki;
             Console.Title = "Fizz Sauce 2: SMFS";
-            string nL = Environment.NewLine;
-            string charName;
 
             Console.WriteLine(nL + " *****************************************************************************" +
                          nL + " *****************************************************************************" +
@@ -19,8 +20,53 @@ namespace FizzSauce2TheSearchForMoreFizzSauce
                          nL + nL + "               Prepare thine buttocks for a thorough exploration" + 
                          nL + nL + "                             of a bold new world." + 
                          nL + nL + nL);
+
+            Console.WriteLine("                 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$$$              $$$$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$$$  START MENU  $$$$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$$$              $$$$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$                  $$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$   SELECT OPTION  $$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$__________________$$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$                  $$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$   L: LOAD GAME   $$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$                  $$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$   N: NEW  GAME   $$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$                  $$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$ ESC: EXIT GAME   $$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$                  $$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" +
+                         nL + "                 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" +
+                         nL + nL + nL);
+
+            do
+            {
+
+                cki = Console.ReadKey(true);
+
+                if (cki.Key == ConsoleKey.L)
+                {
+                    LoadGame();
+                }
+                else if (cki.Key == ConsoleKey.N)
+                {
+                    NewGame();
+                }
+
+            } while (cki.Key != ConsoleKey.Escape);
+
+        }
+
+        static void NewGame()
+        {
             Console.WriteLine(nL + "Who are you?");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+
             charName = Console.ReadLine();
+
+            Console.ResetColor();
 
             if (charName.Length <= 2)
             {
@@ -35,15 +81,11 @@ namespace FizzSauce2TheSearchForMoreFizzSauce
             {
                 Console.WriteLine(charName + "? Excellent to make your acquaintance." + nL);
             }
+        }
 
-            do
-            {
-                cki = Console.ReadKey(true);
+        static void LoadGame()
+        {
 
-
-
-
-            } while (cki.Key != ConsoleKey.Escape);
         }
     }
 }
