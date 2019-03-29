@@ -1,0 +1,6 @@
+C:\Users\mhull\documents\visual studio 2015\Projects\FizzSauce2TheSearchForMoreFizzSauce\bin\Debug\FizzSauce2TheSearchForMoreFizzSauce.exe.config
+C:\Users\mhull\documents\visual studio 2015\Projects\FizzSauce2TheSearchForMoreFizzSauce\bin\Debug\FizzSauce2TheSearchForMoreFizzSauce.exe
+C:\Users\mhull\documents\visual studio 2015\Projects\FizzSauce2TheSearchForMoreFizzSauce\bin\Debug\FizzSauce2TheSearchForMoreFizzSauce.pdb
+C:\Users\mhull\documents\visual studio 2015\Projects\FizzSauce2TheSearchForMoreFizzSauce\obj\Debug\FizzSauce2TheSearchForMoreFizzSauce.csprojResolveAssemblyReference.cache
+C:\Users\mhull\documents\visual studio 2015\Projects\FizzSauce2TheSearchForMoreFizzSauce\obj\Debug\FizzSauce2TheSearchForMoreFizzSauce.exe
+C:\Users\mhull\documents\visual studio 2015\Projects\FizzSauce2TheSearchForMoreFizzSauce\obj\Debug\FizzSauce2TheSearchForMoreFizzSauce.pdb
