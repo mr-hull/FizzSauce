@@ -5,7 +5,6 @@ namespace FizzSauce2TheSearchForMoreFizzSauce
     class InteractiveFizzSauce
     {
         static string nL = Environment.NewLine;
-        static string charName;
 
         static void Main()
         {
@@ -43,16 +42,15 @@ namespace FizzSauce2TheSearchForMoreFizzSauce
 
             do
             {
-
                 cki = Console.ReadKey(true);
 
-                if (cki.Key == ConsoleKey.L)
-                {
-                    LoadGame();
-                }
-                else if (cki.Key == ConsoleKey.N)
+                if (cki.Key == ConsoleKey.N)
                 {
                     NewGame();
+                }
+                else if (cki.Key == ConsoleKey.L)
+                {
+                    LoadGame();
                 }
 
             } while (cki.Key != ConsoleKey.Escape);
@@ -61,31 +59,12 @@ namespace FizzSauce2TheSearchForMoreFizzSauce
 
         static void NewGame()
         {
-            Console.WriteLine(nL + "Who are you?");
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-
-            charName = Console.ReadLine();
-
-            Console.ResetColor();
-
-            if (charName.Length <= 2)
-            {
-
-                Console.WriteLine(charName + "? K." + nL);
-            }
-            else if (charName.Length > 2 && charName.Length <= 5)
-            {
-                Console.WriteLine(charName + ". I've heard worse. Let's get on with it then." + nL);
-            }
-            else
-            {
-                Console.WriteLine(charName + "? Excellent to make your acquaintance." + nL);
-            }
+            FizzSauceGame.BeginNewGame();
         }
 
         static void LoadGame()
         {
-
+            FizzSauceGame.LoadGame();
         }
     }
 }
